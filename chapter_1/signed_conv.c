@@ -49,7 +49,7 @@ int main(int argc, char *argv[])
 
 unsigned int convert_signed(int number, unsigned int bytes)
 {
-  int max = pow(2, bytes);
+  long max = pow(2, bytes);
   
   if (number > max - 1 || number < (-1 * max))
   {
@@ -69,8 +69,8 @@ unsigned int convert_signed(int number, unsigned int bytes)
 
 int convert_unsigned(unsigned int number, unsigned int bytes)
 {
-  unsigned int max = pow(2, bytes);
-  unsigned int tmax = pow(2, bytes - 1);
+  unsigned long max = pow(2, bytes);
+  unsigned long tmax = pow(2, bytes - 1);
 
   if (number > max)
   {
